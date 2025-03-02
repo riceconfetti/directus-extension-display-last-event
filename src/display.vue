@@ -14,7 +14,7 @@ export default {
 		},
 	},
 	data() {
-		return { lastEvent: JSON.parse(this.value)[0]}
+		return { lastEvent: this.value.length > 0 ? this.value[0] : ''}
 	}
 };
 </script>
