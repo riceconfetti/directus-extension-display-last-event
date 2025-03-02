@@ -18,7 +18,10 @@ export default {
     const lastEvent = ref("");
 
     if (this.value.length > 0) {
-      let events = this.value;
+      let events = this.value.map((x) => dayjs(x.events_id.endDate));
+      events.sort((a, b) => b.diff(a));
+
+      lastEvent.value = events[0].fromNow();
     }
   },
 };
