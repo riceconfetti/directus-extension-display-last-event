@@ -11,6 +11,6 @@ export default defineInterface({
   types: ["alias"],
   localTypes: ["m2m"],
   fields() {
-    return ["**"];
+    return ["events_id.endDate"];
   },
 });
