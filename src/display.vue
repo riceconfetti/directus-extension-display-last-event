@@ -14,10 +14,7 @@ export default {
 		},
 	},
 	data() {
-		let endDates = this.value.map((x)=> dayjs(x.endDate));
-		endDates.sort((a, b)=> b.diff(a))
-
-		return {lastEvent: endDates[0].fromNow()}
+		return { lastEvent: this.value[0].events_id}
 	}
 };
 </script>
