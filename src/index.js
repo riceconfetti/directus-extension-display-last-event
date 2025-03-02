@@ -10,5 +10,5 @@ export default defineInterface({
 	options: null,
 	types: ['alias'],
 	localTypes: ['m2m'],
-	fields:['endDate']
+	fields:[{events_id:['endDate']}]
 });
