@@ -9,5 +9,6 @@ export default defineInterface({
 	component: DisplayComponent,
 	options: null,
 	types: ['alias'],
-	localTypes: ['m2m']
+	localTypes: ['m2m'],
+	fields:['endDate']
 });
