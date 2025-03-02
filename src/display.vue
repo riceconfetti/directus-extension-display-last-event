@@ -14,7 +14,7 @@ export default {
 		},
 	},
 	data() {
-		return { lastEvent: this.value}
+		return { lastEvent: JSON.parse(this.value)[0]}
 	}
 };
 </script>
