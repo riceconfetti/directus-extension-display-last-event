@@ -14,14 +14,14 @@ export default {
       default: null,
     },
   },
-  setup() {
-    const lastEvent = ref("");
-
-    if (this.value.length > 0) {
+  data() {
+    if (this.value && this.value.length > 0) {
       let events = this.value.map((x) => dayjs(x.events_id.endDate));
       events.sort((a, b) => b.diff(a));
 
-      lastEvent.value = events[0].fromNow();
+      return { lastEvent: events[0].fromNow() };
+    } else {
+      return { lastEvent: "" };
     }
   },
 };
